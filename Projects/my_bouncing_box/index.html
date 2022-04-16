@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="my_bouncing_box"
+      style="
+        background-color: blue;
+        border-radius: 3px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        min-width: 100px;
+        min-height: 100px;
+        text-align: center;
+        font-weight: bold;
+        color: #999;
+      "
+    >
+      natalie
+    </div>
+    <script type="text/javascript">
+      let box = document.getElementById("my_bouncing_box");
+      let x = 0;
+      let y = 0;
+      let speedX = setInterval(bounce_box, 10);
+      let speedY = setInterval(bounce_box, 10);
+
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+
+      function bounce_box() {
+        box.style.top = x + "px";
+        box.style.left = y + "px";
+        x = x + speedX;
+        y = y + speedY;
+        if (x >= width || x == 0) {
+          speedX = -speedX; //speedX * -1;
+        }
+        if (y >= height || y == 0) {
+          speedY = -speedY;
+        }
+      }
+    </script>
+  </body>
+</html>

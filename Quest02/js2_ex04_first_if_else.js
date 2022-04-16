@@ -1,0 +1,7 @@
+nbr = 10;
+
+if (nbr > 20) {
+  console.log("nbr is greater than 20");
+} else {
+  console.log("nbr is less than 20");
+}
